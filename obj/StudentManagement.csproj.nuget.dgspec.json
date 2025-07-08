@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\muham\\Downloads\\StudentManagement-master\\StudentManagement-master\\StudentManagement.csproj": {}
+    "C:\\Users\\muham\\Downloads\\StudentManagement\\StudentManagement\\StudentManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\muham\\Downloads\\StudentManagement-master\\StudentManagement-master\\StudentManagement.csproj": {
+    "C:\\Users\\muham\\Downloads\\StudentManagement\\StudentManagement\\StudentManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\muham\\Downloads\\StudentManagement-master\\StudentManagement-master\\StudentManagement.csproj",
+        "projectUniqueName": "C:\\Users\\muham\\Downloads\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
         "projectName": "StudentManagement",
-        "projectPath": "C:\\Users\\muham\\Downloads\\StudentManagement-master\\StudentManagement-master\\StudentManagement.csproj",
+        "projectPath": "C:\\Users\\muham\\Downloads\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
         "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\muham\\Downloads\\StudentManagement-master\\StudentManagement-master\\obj\\",
+        "outputPath": "C:\\Users\\muham\\Downloads\\StudentManagement\\StudentManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\muham\\AppData\\Roaming\\NuGet\\NuGet.Config"
