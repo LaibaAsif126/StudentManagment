@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alli\\StudentManagement\\StudentManagement.csproj": {}
+    "C:\\Users\\muham\\Downloads\\StudentManagement\\StudentManagement\\StudentManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alli\\StudentManagement\\StudentManagement.csproj": {
+    "C:\\Users\\muham\\Downloads\\StudentManagement\\StudentManagement\\StudentManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alli\\StudentManagement\\StudentManagement.csproj",
+        "projectUniqueName": "C:\\Users\\muham\\Downloads\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
         "projectName": "StudentManagement",
-        "projectPath": "C:\\Users\\Alli\\StudentManagement\\StudentManagement.csproj",
-        "packagesPath": "C:\\Users\\Alli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alli\\StudentManagement\\obj\\",
+        "projectPath": "C:\\Users\\muham\\Downloads\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
+        "packagesPath": "C:\\Users\\muham\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\muham\\Downloads\\StudentManagement\\StudentManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alli\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\muham\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\8.0.412/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.411/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
