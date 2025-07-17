@@ -1,42 +1,55 @@
 @using StudentManagement.Models
 @model IEnumerable<StudentDto>
 
-
-
-
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Students";
 }
 
-<h1>Index</h1>
+<div class="container mt-5">
+    <div class="bg-white shadow rounded-lg overflow-hidden">
+        <div class="d-flex justify-content-between align-items-center bg-dark text-white px-4 py-3">
+            <h2 class="mb-0 text-lg font-semibold">Students</h2>
+            <a asp-action="Create" class="btn btn-light btn-sm rounded-md shadow-sm hover:bg-gray-100 transition">
+                + Add New
+            </a>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover mb-0">
+                <thead class="bg-light text-secondary">
+                    <tr>
+                        <th class="text-start px-3 py-2">Name</th>
+                        <th class="text-start px-3 py-2">Department</th>
+                        <th class="text-start px-3 py-2">Course</th>
+                        <th class="text-end px-3 py-2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var student in Model)
+                    {
+                        <tr>
+                            <td class="align-middle px-3 py-2">@student.Name</td>
+                            <td class="align-middle px-3 py-2">@student.Department</td>
+                            <td class="align-middle px-3 py-2">@student.CourseTitle</td>
+                            <td class="text-end align-middle px-3 py-2">
+                                <a asp-action="Details" asp-route-id="@student.Id" 
+                                   class="btn btn-outline-info btn-sm rounded-md me-1 shadow-sm">
+                                    Details
+                                </a>
+                                <a asp-action="Edit" asp-route-id="@student.Id" 
+                                   class="btn btn-outline-primary btn-sm rounded-md me-1 shadow-sm">
+                                    Edit
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@student.Id" 
+                                   class="btn btn-outline-danger btn-sm rounded-md shadow-sm">
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Department</th>
-            <th>Course</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-    @foreach (var student in Model)
-    {
-        <tr>
-            <td>@student.Name</td>
-            <td>@student.Department</td>
-            <td>@student.CourseTitle</td>
-
-            <td>
-                <a asp-action="Details" asp-route-id="@student.Id">Details</a> |
-                <a asp-action="Edit" asp-route-id="@student.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@student.Id">Delete</a>
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
 

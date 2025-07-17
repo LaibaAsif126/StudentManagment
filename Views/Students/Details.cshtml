@@ -5,12 +5,34 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Student Details</h2>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="bg-white shadow rounded-lg overflow-hidden border border-light">
+                <div class="bg-info text-white px-4 py-3 border-bottom">
+                    <h4 class="mb-0 font-semibold">Student Details</h4>
+                </div>
+                <div class="px-4 py-4">
+                    <dl class="row mb-4">
+                        <dt class="col-sm-4 fw-semibold text-gray-700">Name</dt>
+                        <dd class="col-sm-8">@Model.Name</dd>
 
-<p><strong>Name:</strong> @Model.Name</p>
-<p><strong>Department:</strong> @Model.Department</p>
-<p><strong>Course:</strong> @Model.CourseTitle</p>
+                        <dt class="col-sm-4 fw-semibold text-gray-700">Department</dt>
+                        <dd class="col-sm-8">@Model.Department</dd>
 
-<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-<a asp-action="Index">Back to List</a>
+                        <dt class="col-sm-4 fw-semibold text-gray-700">Course</dt>
+                        <dd class="col-sm-8">@Model.CourseTitle</dd>
+                    </dl>
+
+                    <div class="d-flex justify-content-between">
+                        <a asp-action="Index" class="btn btn-outline-secondary rounded-md shadow-sm">Back to List</a>
+                        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary rounded-md shadow-sm">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 

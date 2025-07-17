@@ -5,8 +5,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using StudentManagement.Data;
-
-
 using StudentManagement.Models;
 
 namespace StudentManagement.Controllers
@@ -42,16 +40,28 @@ namespace StudentManagement.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(CreateStudentDto dto)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var student = _mapper.Map<Students>(dto);
-                _context.Add(student);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                ViewData["CourseId"] = new SelectList(_context.Courses, "Id", "Title", dto.CourseId);
+
+                if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+                {
+                    return BadRequest(ModelState);
+                }
+
+                return View(dto);
             }
 
-            ViewData["CourseId"] = new SelectList(_context.Courses, "Id", "Title", dto.CourseId);
-            return View(dto);
+            var student = _mapper.Map<Students>(dto);
+            _context.Add(student);
+            await _context.SaveChangesAsync();
+
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            {
+                return Ok();
+            }
+
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Students/Edit/5
@@ -140,4 +150,5 @@ namespace StudentManagement.Controllers
         }
     }
 }
+
 
